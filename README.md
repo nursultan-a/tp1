@@ -1,13 +1,14 @@
-1906841 Nursultan ABDRAKYPOV
-Talgat TYNAEV
+<!--1906841 Nursultan ABDRAKYPOV-->
+<!--Talgat TYNAEV-->
 
-Use python 3.6.5
-Each node only execute one script
+#Use python 3.6.5
 
-Initiation Scenario:
+#Each node only execute one script
 
-Node s initiates  r1, r2,r3
-Node r2 initiates d
+#Initiation Scenario:
+
+    Node s initiates  r1, r2,r3
+    Node r2 initiates d
 
 Thus, follow the following instructions
 
