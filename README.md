@@ -24,61 +24,119 @@ script execution to find rtt of each node:
 ******************************************************************************
 ***                           experiment                                   ***
 ******************************************************************************
+
 experiment 1:
+
     first step: 
+    
         go to terminal on node d
+        
         execute following command
+        
             [sudo tc qdisc add dev eth2 root netem delay 20ms 5ms distribution normal]
+            
             upload d.py from experimentFolder and execute it
+            
     second step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth3 root netem delay 20ms 5ms distribution normal]
+            
             [sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal]
+            
             upload r3.py from experimentFolder and execute it
+            
     third step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal]
+            
             upload s.py from experimentFolder and execute it
+            
 experiment 2:
+
     first step: 
+    
         go to terminal on node d
+        
         execute following command
+        
             [sudo tc qdisc add dev eth2 root netem delay 40ms 5ms distribution normal]
+            
             upload d.py from experimentFolder and execute it
+            
     second step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth3 root netem delay 40ms 5ms distribution normal]
+            
             [sudo tc qdisc add dev eth1 root netem delay 40ms 5ms distribution normal]
+            
             upload r3.py from experimentFolder and execute it
+            
     third step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth1 root netem delay 40ms 5ms distribution normal]
+            
             upload s.py from experimentFolder and execute it
+            
 
 experiment 3:
+
     first step: 
+    
         go to terminal on node d
+        
         execute following command
+        
             [sudo tc qdisc add dev eth2 root netem delay 50ms 5ms distribution normal]
+            
             upload d.py from experimentFolder and execute it
+            
     second step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth3 root netem delay 50ms 5ms distribution normal]
+            
             [sudo tc qdisc add dev eth1 root netem delay 50ms 5ms distribution normal]
+            
             upload r3.py from experimentFolder and execute it
+            
     third step: 
+    
         go to terminal on node r3
+        
         execute following command
+        
             [sudo tc qdisc add dev eth1 root netem delay 50ms 5ms distribution normal]
+            
             upload s.py from experimentFolder and execute it
+            
+
 
 You can also directly change the delay settings by using following command:
+
 example: [sudo tc qdisc change dev eth3 root netem delay 50ms 5ms distribution normal]
 
+
+
 Delete delay configuration from internet:
+
 [sudo tc qdisc change dev <eth> root netem]
+    
