@@ -1,0 +1,1 @@
+print("r2 is not in the shortest path from s to destination d")
